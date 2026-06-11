@@ -7,7 +7,7 @@
   --terracotta-soft: rgba(156, 76, 15, 0.6);
   --yellow: #aae467;
   --yellow-dark: #ebff8c;
-  --yellow-soft: #aae467;
+  --yellow-soft: #ebff8c;
   --yellow-soft-bg: rgba(254, 218, 0, 0.6);
   --background: #ffffff;
   --background-muted: #f9fafb;
@@ -15,7 +15,7 @@
   --heading: #1a1a1a;
   --muted: #6b6761;
   --nav: #504d49;
-  --hero-accent: #aae467;
+  --hero-accent: #ebff8c;
   --hero-surface: color-mix(in srgb, var(--hero-accent) 16%, white);
   --hero-surface-solid: color-mix(in srgb, var(--hero-accent) 16%, white);
   --border: #e5e7eb;

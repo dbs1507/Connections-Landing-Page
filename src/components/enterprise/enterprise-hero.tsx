@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { enterprise } from "@/lib/content";
+import { enterprise, site } from "@/lib/content";
+
+const whatsappUrl = `https://wa.me/${site.phoneHref}?text=${encodeURIComponent(site.enterpriseWhatsappMessage)}`;
 
 export function EnterpriseHero() {
   const { hero } = enterprise;
@@ -19,12 +19,14 @@ export function EnterpriseHero() {
             {hero.subtitle}
           </p>
           <div className="mt-8 md:mt-10">
-            <Link
-              href="#contato"
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="primary-btn inline-block px-8 py-3 text-sm font-semibold"
             >
               {hero.cta}
-            </Link>
+            </a>
           </div>
         </div>
       </div>

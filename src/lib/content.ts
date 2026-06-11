@@ -267,6 +267,14 @@ export const metodologia = [
   },
 ] as const;
 
+export const metodologiaPlataforma = {
+  title: "ConnectLang",
+  description:
+    "Uma plataforma exclusiva desenvolvida pela Connections para apoiar a evolução dos nossos alunos, com ferramentas de estudo, biblioteca e acompanhamento dos professores.",
+  image: "/img/plataform-section.png",
+  imageAlt: "Plataforma exclusiva Connections para alunos",
+} as const;
+
 export const professores = [
   {
     name: "Vitor Cardoso",
