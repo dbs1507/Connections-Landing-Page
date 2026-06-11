@@ -6,7 +6,7 @@ export function Metodologia() {
     <section id="metodologia" className="relative overflow-hidden bg-white py-20">
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-24 -left-[28%] z-0 w-[min(88vw,640px)] md:-bottom-32 md:-left-[26%] md:w-[min(55vw,900px)]"
+        className="pointer-events-none absolute -bottom-16 -left-[38%] z-0 w-[min(112vw,900px)] md:-bottom-32 md:-left-[24%] md:w-[min(62vw,980px)]"
       >
         <Image
           src="/img/triangulo.png"
@@ -19,7 +19,7 @@ export function Metodologia() {
 
       <div
         aria-hidden
-        className="pointer-events-none absolute top-0 -right-[28%] z-0 w-[min(88vw,640px)] -translate-y-[58%] md:-right-[22%] md:w-[min(55vw,900px)] md:-translate-y-[62%]"
+        className="pointer-events-none absolute top-0 -right-[18%] z-0 w-[min(62vw,460px)] -translate-y-[52%] md:-right-[16%] md:w-[min(38vw,620px)] md:-translate-y-[58%]"
       >
         <Image
           src="/img/quadrado_verde_textura.svg"
@@ -35,7 +35,7 @@ export function Metodologia() {
           Nossa Metodologia
         </h2>
 
-        <div className="mt-12 grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-12">
+        <div className="mt-16 grid grid-cols-1 items-start gap-10 md:mt-20 md:grid-cols-2 md:gap-12">
           {metodologia.map((item, index) => (
             <article
               key={item.title}
@@ -45,7 +45,7 @@ export function Metodologia() {
             >
               <h3 className="text-2xl text-[var(--heading)]">{item.title}</h3>
 
-              <div className="mt-4">
+              <div className="mt-6">
                 {item.paragraphs.map((paragraph) => (
                   <p
                     key={paragraph}

@@ -3,7 +3,7 @@ import { depoimentos } from "@/lib/content";
 
 export function SocialProof() {
   return (
-    <section id="depoimentos" className="py-20">
+    <section id="depoimentos" className="pt-20 pb-8 md:pb-10">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-center text-3xl tracking-tight text-[var(--heading)] md:text-4xl">
           O que nossos alunos dizem

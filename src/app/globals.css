@@ -139,13 +139,13 @@ body {
   content: "";
   position: absolute;
   z-index: -1;
-  top: -0.18em;
-  right: -0.22em;
-  bottom: -0.14em;
-  left: -0.18em;
+  top: 0.02em;
+  right: -0.08em;
+  bottom: 0.04em;
+  left: -0.06em;
   background-color: var(--primary-soft);
   border-radius: 1rem;
-  transform: translate(0.08em, 0.08em);
+  transform: translate(0, 0);
 }
 
 .highlight-yellow {
@@ -163,13 +163,13 @@ body {
   content: "";
   position: absolute;
   z-index: -1;
-  top: -0.18em;
-  right: -0.22em;
-  bottom: -0.14em;
-  left: -0.06em;
+  top: 0.02em;
+  right: -0.1em;
+  bottom: 0.04em;
+  left: -0.02em;
   background-color: rgba(253, 110, 0, 0.8);
   border-radius: 0;
-  transform: translate(0, -0.08em);
+  transform: translate(0, 0);
 }
 
 .highlight-terracotta.highlight-compact::before {

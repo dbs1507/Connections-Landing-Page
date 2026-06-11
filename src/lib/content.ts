@@ -46,7 +46,7 @@ export const enterprise = {
     cta: "Solicitar Proposta",
   },
   advantages: {
-    title: "Vantagens do Inglês Corporativo",
+    title: "Vantagens dos Cursos de Idiomas Corporativos",
     items: [
       {
         title: "Expansão Global",

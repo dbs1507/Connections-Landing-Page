@@ -8,20 +8,18 @@ export function HeroSection() {
   return (
     <section
       id="sobre"
-      className="flex min-h-svh flex-col items-center justify-center bg-transparent px-6 pb-12 pt-24 md:pb-16 md:pt-28"
+      className="flex min-h-svh flex-col items-center justify-center overflow-x-clip bg-transparent px-6 pb-12 pt-24 md:pb-16 md:pt-28"
     >
       <div className="mx-auto w-full max-w-4xl text-center">
-        <h1 className="text-balance text-4xl leading-[1.15] tracking-tight text-[var(--heading)] md:text-5xl lg:text-5xl">
+        <h1 className="text-balance text-4xl leading-[1.35] tracking-tight text-[var(--heading)] md:text-5xl md:leading-[1.2] lg:text-5xl">
           {heroHeadline.lead}{" "}
           <span className="highlight-terracotta">
             {heroHeadline.highlightTerracotta}
           </span>{" "}
           {heroHeadline.middle}{" "}
-          <span className="inline-block whitespace-nowrap">
-            {heroHeadline.tail}{" "}
-            <span className="highlight-primary">
-              {heroHeadline.highlightYellow}
-            </span>
+          {heroHeadline.tail}{" "}
+          <span className="highlight-primary">
+            {heroHeadline.highlightYellow}
           </span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:mt-8 md:text-lg">

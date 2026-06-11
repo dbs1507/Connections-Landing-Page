@@ -5,7 +5,7 @@ export function EnterpriseSolutions() {
 
   return (
     <section id="solucoes" className="bg-white pb-20 pt-8 md:pt-10">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl px-8 md:px-6">
         <h2 className="text-center text-3xl tracking-tight text-[var(--heading)] md:text-4xl">
           {solutions.title}
         </h2>
