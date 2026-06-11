@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #349993;
+  --primary-soft: color-mix(in srgb, var(--primary) 90%, white);
+  --terracotta: #e9542c;
+  --terracotta-soft: rgba(156, 76, 15, 0.6);
+  --yellow: #aae467;
+  --yellow-dark: #ebff8c;
+  --yellow-soft: #aae467;
+  --yellow-soft-bg: rgba(254, 218, 0, 0.6);
+  --background: #ffffff;
+  --background-muted: #f9fafb;
+  --foreground: #6b6761;
+  --heading: #1a1a1a;
+  --muted: #6b6761;
+  --nav: #504d49;
+  --hero-accent: #aae467;
+  --hero-surface: color-mix(in srgb, var(--hero-accent) 16%, white);
+  --hero-surface-solid: color-mix(in srgb, var(--hero-accent) 16%, white);
+  --border: #e5e7eb;
+  --font-body: "Messina Sans Web", "Messina Sans Web Regular Placeholder",
+    system-ui, sans-serif;
+  --font-title: "Recife Text Web Regular", "Recife Text Web Regular Placeholder",
+    Georgia, "Times New Roman", serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: ui-monospace, monospace;
+}
+
+@font-face {
+  font-family: "Recife Text Web Regular";
+  src: url("/font/RecifeTextWeb-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Messina Sans Web";
+  src: url("/font/MessinaSansWeb-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Messina Sans Web";
+  src: url("/font/MessinaSansWeb-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Messina Sans Web";
+  src: url("/font/MessinaSansWeb-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h1 *,
+h2 *,
+h3 *,
+h4 * {
+  font-family: var(--font-title);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--heading);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-padding-top: 6.25rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.section-shell {
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.section-muted {
+  background: var(--background-muted);
+}
+
+.surface-hero {
+  background-color: var(--hero-surface);
+}
+
+.highlight-terracotta {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+  font-family: inherit;
+  color: var(--heading);
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin-left: 0.16em;
+  margin-right: 0.08em;
+}
+
+.highlight-primary {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+  font-family: inherit;
+  color: var(--heading);
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin-left: 0.1em;
+}
+
+.highlight-primary::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -0.18em;
+  right: -0.22em;
+  bottom: -0.14em;
+  left: -0.18em;
+  background-color: var(--primary-soft);
+  border-radius: 1rem;
+  transform: translate(0.08em, 0.08em);
+}
+
+.highlight-yellow {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+  font-family: inherit;
+  color: var(--heading);
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin-left: 0.1em;
+}
+
+.highlight-terracotta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -0.18em;
+  right: -0.22em;
+  bottom: -0.14em;
+  left: -0.06em;
+  background-color: rgba(253, 110, 0, 0.8);
+  border-radius: 0;
+  transform: translate(0, -0.08em);
+}
+
+.highlight-terracotta.highlight-compact::before {
+  top: 0.18em;
+  bottom: 0.02em;
+  transform: translate(0, 0.04em);
+}
+
+.highlight-yellow::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -0.18em;
+  right: -0.22em;
+  bottom: -0.14em;
+  left: -0.18em;
+  background-color: var(--yellow-soft-bg);
+  border-radius: 0.5rem;
+  transform: translate(0.08em, 0.08em);
+}
+
+.header-scrolled {
+  background-color: var(--hero-surface-solid);
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: 1px solid var(--primary);
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+  filter: brightness(0.95);
+}
+
+.secondary-btn {
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--foreground);
+  border-radius: 0;
+}
+
+.secondary-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background-color: #25d366;
+  color: white;
+  font-size: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-float::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
