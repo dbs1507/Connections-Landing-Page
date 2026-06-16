@@ -23,7 +23,7 @@ export function EnterpriseHero() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="primary-btn inline-block px-8 py-3 text-sm font-semibold"
+              className="border-black/70 bg-black/90 px-8 py-3 text-sm font-semibold text-white inline-block"
             >
               {hero.cta}
             </a>

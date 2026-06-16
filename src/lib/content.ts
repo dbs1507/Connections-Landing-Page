@@ -9,7 +9,7 @@ export const site = {
   whatsappMessage:
     "Olá, gostaria de mais informações sobre as aulas na Connections :)",
   enterpriseWhatsappMessage:
-    "Olá, gostaria de mais informações sobre os treinamentos corporativos",
+    "Olá, gostaria de mais informações sobre os cursos corporativos da Connections Languages",
   ctaTitle: "Aprenda idiomas de forma natural e conecte-se com o mundo",
   heroHeadline: {
     lead: "Aprenda",

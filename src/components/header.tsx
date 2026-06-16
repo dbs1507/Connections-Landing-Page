@@ -7,16 +7,16 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { enterpriseNavLinks, navLinks } from "@/lib/content";
 
+const enterpriseDesktopNavLinks = [
+  ...enterpriseNavLinks,
+  { href: "/", label: "Início", highlight: true as const },
+] as const;
+
 export function Header() {
   const pathname = usePathname();
   const isEnterprisePage = pathname === "/empresarial";
-  const mainNavLinks = isEnterprisePage ? enterpriseNavLinks : navLinks;
-  const secondaryNavLinks = isEnterprisePage
-    ? [{ href: "/", label: "Início", highlight: true as const }]
-    : [];
-  const mobileNavLinks = isEnterprisePage
-    ? [...enterpriseNavLinks, { href: "/", label: "Início", highlight: true as const }]
-    : navLinks;
+  const desktopNavLinks = isEnterprisePage ? enterpriseDesktopNavLinks : navLinks;
+  const mobileNavLinks = isEnterprisePage ? enterpriseDesktopNavLinks : navLinks;
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -47,11 +47,11 @@ export function Header() {
           </Link>
 
           <nav className="hidden items-center gap-4 md:flex lg:gap-5">
-            {mainNavLinks.map((link) => (
+            {desktopNavLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-1 py-0.5 text-sm text-[var(--nav)] transition-opacity hover:opacity-75"
+                className={`rounded-lg px-1 py-0.5 text-sm text-[var(--nav)] transition-opacity hover:opacity-75`}
               >
                 {link.label}
               </Link>
@@ -59,29 +59,15 @@ export function Header() {
           </nav>
         </div>
 
-        <div className="flex items-center gap-3">
-          <nav className="hidden items-center gap-4 md:flex lg:gap-5">
-            {secondaryNavLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="rounded-lg px-1 py-0.5 text-sm font-semibold text-[var(--nav)] transition-opacity hover:opacity-75"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          <button
-            type="button"
-            className="rounded-xl border border-[var(--border)] p-2 text-[var(--foreground)] md:hidden"
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-expanded={menuOpen}
-            aria-label="Abrir menu"
-          >
-            {menuOpen ? <X size={18} /> : <Menu size={18} />}
-          </button>
-        </div>
+        <button
+          type="button"
+          className="rounded-xl border border-[var(--border)] p-2 text-[var(--foreground)] md:hidden"
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-expanded={menuOpen}
+          aria-label="Abrir menu"
+        >
+          {menuOpen ? <X size={18} /> : <Menu size={18} />}
+        </button>
 
         <nav
           className={`${
