@@ -35,7 +35,7 @@ export function HeroSection() {
             Quero começar agora
           </a>
           <a
-            href="#pacotes"
+            href="#modalidades"
             className="px-5 py-3 text-sm font-semibold text-black border border-black/70"
           >
             Ver pacotes

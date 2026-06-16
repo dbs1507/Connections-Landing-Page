@@ -27,7 +27,7 @@ export const navLinks = [
   { href: "#metodologia", label: "Metodologia" },
   { href: "#idiomas", label: "Idiomas" },
   { href: "#professores", label: "Professores" },
-  // { href: "#pacotes", label: "Pacotes" },
+  { href: "#modalidades", label: "Modalidades" },
   { href: "#depoimentos", label: "Depoimentos" },
   { href: "/empresarial", label: "Empresarial" },
   // { href: "/newsletter", label: "Newsletter", highlight: true },
