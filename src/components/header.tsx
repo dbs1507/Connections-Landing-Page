@@ -14,7 +14,7 @@ const enterpriseDesktopNavLinks = [
 
 export function Header() {
   const pathname = usePathname();
-  const isEnterprisePage = pathname === "/empresarial";
+  const isEnterprisePage = pathname === "/enterprise";
   const desktopNavLinks = isEnterprisePage ? enterpriseDesktopNavLinks : navLinks;
   const mobileNavLinks = isEnterprisePage ? enterpriseDesktopNavLinks : navLinks;
   const [menuOpen, setMenuOpen] = useState(false);

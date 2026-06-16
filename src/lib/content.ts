@@ -29,15 +29,15 @@ export const navLinks = [
   { href: "#professores", label: "Professores" },
   { href: "#modalidades", label: "Modalidades" },
   { href: "#depoimentos", label: "Depoimentos" },
-  { href: "/empresarial", label: "Empresarial" },
+  { href: "/enterprise", label: "Empresarial" },
   // { href: "/newsletter", label: "Newsletter", highlight: true },
 ] as const;
 
 export const enterpriseNavLinks = [
-  { href: "/empresarial#vantagens", label: "Vantagens" },
-  { href: "/empresarial#metodologia", label: "Metodologia" },
-  { href: "/empresarial#solucoes", label: "Soluções" },
-  { href: "/empresarial#contato", label: "Contato" },
+  { href: "/enterprise#vantagens", label: "Vantagens" },
+  { href: "/enterprise#metodologia", label: "Metodologia" },
+  { href: "/enterprise#solucoes", label: "Soluções" },
+  { href: "/enterprise#contato", label: "Contato" },
 ] as const;
 
 export const enterprise = {

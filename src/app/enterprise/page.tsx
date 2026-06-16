@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function EmpresarialPage() {
+export default function EnterprisePage() {
   return (
     <>
       <TopShell>
