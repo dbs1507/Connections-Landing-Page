@@ -29,7 +29,7 @@ export function EnterpriseMethodology() {
             {methodology.pillars.map((pillar) => (
               <article
                 key={pillar.code}
-                className="flex min-h-[168px] flex-col justify-between overflow-hidden rounded-2xl p-5 transition-transform duration-300 hover:-translate-y-0.5 md:min-h-[200px] md:p-6 lg:min-h-[228px] lg:p-7"
+                className="flex min-h-[168px] flex-col justify-between overflow-hidden p-5 transition-transform duration-300 hover:-translate-y-0.5 md:min-h-[200px] md:p-6 lg:min-h-[228px] lg:p-7"
                 style={{
                   backgroundColor: pillar.theme.bg,
                   color: pillar.theme.text,
