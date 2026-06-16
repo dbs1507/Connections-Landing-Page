@@ -30,13 +30,13 @@ export function HeroSection() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="primary-btn px-5 py-3 text-sm font-semibold"
+            className="border-black/70 bg-black/90 px-5 py-3 text-sm font-semibold text-white"
           >
             Quero começar agora
           </a>
           <a
             href="#pacotes"
-            className="secondary-btn border-white/70 bg-white/90 px-5 py-3 text-sm font-semibold"
+            className="px-5 py-3 text-sm font-semibold text-black border border-black/70"
           >
             Ver pacotes
           </a>

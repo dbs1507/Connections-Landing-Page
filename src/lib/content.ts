@@ -4,6 +4,8 @@ export const site = {
   phone: "(41) 99101-3056",
   phoneHref: "5541991013056",
   email: "connectionslanguages@gmail.com",
+  instagram: "https://www.instagram.com/connections.languages/",
+  youtube: "https://www.youtube.com/@ConnectionsLanguages",
   whatsappMessage:
     "Olá, gostaria de mais informações sobre as aulas na Connections :)",
   enterpriseWhatsappMessage:
@@ -21,12 +23,13 @@ export const site = {
 } as const;
 
 export const navLinks = [
-  { href: "#sobre", label: "Sobre Nós" },
+  // { href: "#sobre", label: "Sobre Nós" },
   { href: "#metodologia", label: "Metodologia" },
+  { href: "#idiomas", label: "Idiomas" },
   { href: "#professores", label: "Professores" },
   { href: "#pacotes", label: "Pacotes" },
   { href: "#depoimentos", label: "Depoimentos" },
-  { href: "/empresarial", label: "Empresarial", highlight: true },
+  { href: "/empresarial", label: "Empresarial" },
   // { href: "/newsletter", label: "Newsletter", highlight: true },
 ] as const;
 
@@ -282,7 +285,6 @@ export const professores = [
     image: "/img/professor1.jpg",
     role: "Trilíngue Autodidata",
     tags: ["Inglês", "Cultura Geek", "Tecnologia"],
-    instagram: "https://www.instagram.com/vitrolez/",
     bio: "Desde os 7 anos, Vitor domina o inglês e traz para suas aulas o método autodidata, onde a curiosidade é a chave para o aprendizado. Inspirado pela arte e pela interação humana, ele transforma o estudo de idiomas em uma experiência envolvente e natural!",
     theme: {
       ring: "var(--primary)",
@@ -295,9 +297,7 @@ export const professores = [
     initials: "DC",
     image: "/img/professor2.png",
     role: "Poliglota Autodidata",
-    tags: ["Inglês", "Italiano", "Francês"],
-    instagram: "https://www.instagram.com/danecarrdoso/",
-    youtube: "https://www.youtube.com/@conexaopoliglota",
+    tags: ["Inglês", "Italiano", "Francês", "Alemão"],
     bio: "Fundador da Connections e por mais de 8 anos trabalhando com educação, Daniel é apaixonado por motivar pessoas a aprenderem idiomas e acredita que constância e o método certo levam qualquer pessoa à fluência!",
     theme: {
       ring: "var(--hero-accent)",
@@ -311,7 +311,6 @@ export const professores = [
     image: "/img/professor4.jpeg",
     role: "Professor de Espanhol",
     tags: ["Espanhol", "Conversação"],
-    instagram: "https://www.instagram.com/lucasalvarez.p/",
     bio: "Espanhol de nascimento, mas de mãe brasileira, viveu parte da sua infância na sua terra natal antes de migrar para o Brasil, tendo herdado de berço os dois idiomas, o espanhol e o português. No entanto, o ir e vir entre os dois países se tornou um \"destino\" comum durante todos estes anos, trazendo consigo muitas experiências e aprendizados enriquecedores.\n\nCom o domínio natural das duas línguas, e apaixonado pelas diversas culturas do mundo, quer te ajudar a aprender o espanhol de uma forma natural e espontânea, te levando a explorar novas fronteiras através da língua e da conversação.",
     theme: {
       ring: "var(--terracotta)",
@@ -325,7 +324,6 @@ export const professores = [
     image: "/img/professor5.jpeg",
     role: "Inglês e Português",
     tags: ["Inglês", "Literatura", "Cultura pop"],
-    instagram: "https://www.instagram.com/connectionslanguages/",
     bio: "Formada em Letras Português/Inglês, Maria é apaixonada por idiomas, literatura e cultura pop. Com experiência em ensino personalizado, ela conecta o aprendizado a temas que os alunos amam — de séries e músicas a cultura asiática. Suas aulas são dinâmicas, acolhedoras e feitas sob medida para cada estudante.",
     theme: {
       ring: "color-mix(in srgb, var(--primary) 72%, var(--heading))",
@@ -345,6 +343,7 @@ export const modalidades = [
       "Ideal para desenvolver habilidades de comunicação em um ambiente dinâmico e descontraído.",
     ],
     imageFirst: true,
+    pacotes: ["6 meses", "1 ano", "Flexível"],
   },
   {
     title: "Aulas Particulares",
@@ -355,56 +354,50 @@ export const modalidades = [
       "Perfeitas para quem busca flexibilidade e um ritmo de aprendizado adaptado às suas necessidades.",
     ],
     imageFirst: false,
+    pacotes: ["6 meses", "1 ano", "Flexível"],
   },
-  {
-    title: "Mentoria para Autodidatas",
-    image: "/img/vectors/ideia.png",
-    imageAlt: "Mentoria para Autodidatas",
-    paragraphs: [
-      "Nossa mentoria é ideal para quem deseja aprender um idioma de forma independente, mas precisa de orientação para começar. Mesmo que o idioma desejado não seja falado diretamente, é possível oferecer ajuda com materiais, rotinas de estudo e estratégias personalizadas.",
-      "Você terá acesso a um plano de estudos estruturado, dicas de recursos confiáveis e acompanhamento para garantir que está no caminho certo.",
-      "Transforme sua curiosidade em fluência com a nossa mentoria para autodidatas!",
-    ],
-    imageFirst: false,
-    imageSmall: true,
-  },
+  // {
+  //   title: "Mentoria para Autodidatas",
+  //   image: "/img/vectors/ideia.png",
+  //   imageAlt: "Mentoria para Autodidatas",
+  //   paragraphs: [
+  //     "Nossa mentoria é ideal para quem deseja aprender um idioma de forma independente, mas precisa de orientação para começar. Mesmo que o idioma desejado não seja falado diretamente, é possível oferecer ajuda com materiais, rotinas de estudo e estratégias personalizadas.",
+  //     "Você terá acesso a um plano de estudos estruturado, dicas de recursos confiáveis e acompanhamento para garantir que está no caminho certo.",
+  //     "Transforme sua curiosidade em fluência com a nossa mentoria para autodidatas!",
+  //   ],
+  //   imageFirst: false,
+  //   imageSmall: true,
+  // },
 ] as const;
 
 export const pacotes = [
   {
     title: "Aulas Particulares",
-    plans: [
-      { name: "Pacote 3 meses", price: "R$450,00 por mês" },
-      { name: "Pacote 6 meses", price: "R$425,00 por mês" },
-      { name: "Pacote 1 ano", price: "R$400,00 por mês" },
-    ],
-    note: "*Os valores aumentam gradualmente referente à quantidade de aulas por semana oferecida. Oferecemos até 5x na semana.",
+    plans: [{ name: "6 meses" }, { name: "1 ano" }, { name: "Flexível" }],
+    note: "Oferecemos até 5 aulas por semana. Entre em contato para montar o pacote ideal para você.",
   },
   {
     title: "Aulas em Grupo",
-    plans: [
-      { name: "Pacote 3 meses", price: "R$330,00 por mês" },
-      { name: "Pacote 6 meses", price: "R$305,00 por mês" },
-      { name: "Pacote 1 ano", price: "R$285,00 por mês" },
-    ],
-    note: "*Os valores aumentam gradualmente referente à quantidade de aulas por semana oferecida. Oferecemos até 5x na semana.",
+    plans: [{ name: "6 meses" }, { name: "1 ano" }, { name: "Flexível" }],
+    note: "Oferecemos até 5 aulas por semana. Entre em contato para montar o pacote ideal para você.",
   },
 ] as const;
 
 export const depoimentos = [
   {
     quote:
-      "A Connections Languages mudou minha vida! Agora posso me comunicar fluentemente em inglês.",
-    author: "João Silva",
-  },
-  {
-    quote: "As aulas são muito dinâmicas e os professores são incríveis!",
-    author: "Maria Oliveira",
+      "I think the way you try to teach, with conversations, games, and videos, makes the class better, unlike classes at school where only the teacher talked. I found your method much easier to learn.",
+    author: "Geovane Meurer",
   },
   {
     quote:
-      "Aprendi espanhol em poucos meses e já consigo me comunicar em viagens.",
-    author: "Carlos Souza",
+      "Estou gostando bastante. Eu sou um caso diferente porque eu não faço aula porque preciso, é simplesmente por prazer, então fico muito a vontade para aprender no meu tempo e conseguir soltar a conversação. Então a aula é quase um bate-papo, quase uma terapia. haha",
+    author: "Thiago Bollmann",
+  },
+  {
+    quote:
+      "Evolução irmão. Pratiquei bastante a conversação contigo, melhorei meu vocabulário aprendendo bastante palavra nova.",
+    author: "Matheus Frizzo",
   },
 ] as const;
 

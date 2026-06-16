@@ -3,39 +3,58 @@ import { modalidades } from "@/lib/content";
 
 export function Modalidades() {
   return (
-    <section id="modalidades" className="py-20 pb-32 md:pb-20">
+    <section id="modalidades" className="py-20">
       <div className="mx-auto max-w-6xl px-6">
         <h2 className="text-center text-3xl tracking-tight text-[var(--heading)] md:text-4xl">
           Modalidades de Aula
         </h2>
 
-        <div className="relative isolate mt-12">
-          <div className="relative z-0 grid grid-cols-1 items-start gap-8 md:grid-cols-3 md:gap-10">
-            {modalidades.map((item) => (
-              <article key={item.title}>
-                <h3 className="text-xl text-[var(--heading)]">{item.title}</h3>
-                {item.paragraphs.map((paragraph) => (
-                  <p
-                    key={paragraph}
-                    className="mt-4 text-justify leading-relaxed text-[var(--muted)]"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
-              </article>
-            ))}
-          </div>
+        <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
+          {modalidades.map((item) => (
+            <article key={item.title}>
+              <h3 className="text-xl text-[var(--heading)]">{item.title}</h3>
 
-          <div className="pointer-events-none relative z-10 -mt-14 -mx-6 h-36 w-[calc(100%+3rem)] overflow-hidden md:-mx-0 md:-mt-28 md:h-auto md:w-full md:overflow-visible lg:-mt-44">
-            <Image
-              src="/img/pencil-strip.png"
-              alt=""
-              aria-hidden
-              width={1920}
-              height={520}
-              className="absolute right-0 top-1/2 h-[130%] w-auto max-w-none min-w-[620px] -translate-y-1/2 object-cover object-right md:relative md:right-auto md:top-auto md:h-auto md:min-w-0 md:w-[1150px] md:translate-y-0 md:object-contain md:-translate-x-[35%] lg:w-[1100px]"
-            />
-          </div>
+              <p className="mt-4 text-justify leading-relaxed text-[var(--muted)]">
+                {item.paragraphs[0]}
+              </p>
+
+
+              {item.paragraphs.slice(1).map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="mt-4 text-justify leading-relaxed text-[var(--muted)]"
+                >
+                  {paragraph}
+                </p>
+              ))}
+              <div className="mt-4 flex flex-wrap items-center gap-2">
+                <span className="text-sm font-semibold text-[var(--heading)]">
+                  Pacotes
+                </span>
+                {item.pacotes.map((pacote) => (
+                  <span
+                    key={pacote}
+                    className="inline-block text-black highlight-terracotta px-3 py-1 [font-family:var(--font-body)] text-xs font-bold text-background md:text-sm"
+                  >
+                    {pacote}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div
+          aria-hidden
+          className="pointer-events-none relative -mx-6 mt-10 h-[clamp(9rem,32vw,15rem)] w-[calc(100%+3rem)] md:-mx-10 md:mt-14 md:h-[clamp(21rem,28vw,16rem)] md:w-[calc(100%+5rem)]"
+        >
+          <Image
+            src="/img/pencil-strip.png"
+            alt=""
+            width={1920}
+            height={520}
+            className="absolute bottom-0 left-1/3 h-[135%] w-[min(148%,1280px)] max-w-none -translate-x-1/2 object-contain object-bottom md:h-[140%] md:w-[min(120%,100vw)] md:max-w-[88rem]"
+          />
         </div>
       </div>
     </section>

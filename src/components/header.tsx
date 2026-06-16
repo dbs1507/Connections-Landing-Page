@@ -7,20 +7,13 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { enterpriseNavLinks, navLinks } from "@/lib/content";
 
-const homeMainNavLinks = navLinks.filter(
-  (link) => !("highlight" in link && link.highlight),
-);
-const homeSecondaryNavLinks = navLinks.filter(
-  (link) => "highlight" in link && link.highlight,
-);
-
 export function Header() {
   const pathname = usePathname();
   const isEnterprisePage = pathname === "/empresarial";
-  const mainNavLinks = isEnterprisePage ? enterpriseNavLinks : homeMainNavLinks;
+  const mainNavLinks = isEnterprisePage ? enterpriseNavLinks : navLinks;
   const secondaryNavLinks = isEnterprisePage
     ? [{ href: "/", label: "Início", highlight: true as const }]
-    : homeSecondaryNavLinks;
+    : [];
   const mobileNavLinks = isEnterprisePage
     ? [...enterpriseNavLinks, { href: "/", label: "Início", highlight: true as const }]
     : navLinks;

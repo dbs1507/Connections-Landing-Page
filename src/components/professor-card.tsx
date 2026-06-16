@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { ProfessorSocial } from "@/components/professor-social";
+import { site } from "@/lib/content";
 import type { professores } from "@/lib/content";
 
 type Professor = (typeof professores)[number];
@@ -76,8 +77,10 @@ export function ProfessorCard({ professor }: ProfessorCardProps) {
 
         <div className="mt-4">
           <ProfessorSocial
-            instagram={professor.instagram}
-            youtube={"youtube" in professor ? professor.youtube : undefined}
+            instagram={site.instagram}
+            youtube={site.youtube}
+            instagramLabel="Instagram da Connections"
+            youtubeLabel="YouTube da Connections"
           />
         </div>
       </div>

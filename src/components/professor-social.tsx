@@ -1,6 +1,8 @@
 type ProfessorSocialProps = {
-  instagram: string;
+  instagram?: string;
   youtube?: string;
+  instagramLabel?: string;
+  youtubeLabel?: string;
 };
 
 function InstagramIcon() {
@@ -38,25 +40,36 @@ function YoutubeIcon() {
   );
 }
 
-export function ProfessorSocial({ instagram, youtube }: ProfessorSocialProps) {
+export function ProfessorSocial({
+  instagram,
+  youtube,
+  instagramLabel = "Instagram",
+  youtubeLabel = "YouTube",
+}: ProfessorSocialProps) {
+  if (!instagram && !youtube) {
+    return null;
+  }
+
   return (
     <div className="flex justify-center gap-3">
+      {instagram ? (
       <a
         href={instagram}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Instagram"
+        aria-label={instagramLabel}
         className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--primary)] bg-[var(--primary)] text-[var(--background)] transition-transform hover:scale-105"
       >
         <InstagramIcon />
       </a>
+      ) : null}
 
       {youtube ? (
         <a
           href={youtube}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="YouTube"
+          aria-label={youtubeLabel}
           className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--terracotta)] bg-[var(--terracotta)] text-[var(--background)] transition-transform hover:scale-105"
         >
           <YoutubeIcon />

@@ -24,7 +24,7 @@ export default function Home() {
         <Idiomas />
         <Professores />
         <Modalidades />
-        <Pacotes />
+        {/* <Pacotes /> */}
         {/* <Importancia /> */}
         <SocialProof />
         {/* <Contato /> */}
