@@ -319,7 +319,7 @@ export const professores = [
     },
   },
   {
-    name: "Professora Maria",
+    name: "Maria Eduarda",
     initials: "PM",
     image: "/img/professor5.jpeg",
     role: "Inglês e Português",
