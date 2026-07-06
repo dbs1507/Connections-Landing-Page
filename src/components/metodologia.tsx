@@ -66,6 +66,13 @@ export function Metodologia() {
           <p className="relative z-10 mt-4 max-w-3xl text-justify leading-relaxed text-[var(--muted)]">
             {metodologiaPlataforma.description}
           </p>
+          <div className="mt-6">
+            <a
+              href="#modalidades"
+              className="px-5 py-3 text-sm font-semibold text-white bg-black/90"
+            >Quero conhecer
+          </a>
+          </div>
         </div>
 
         <div className="relative z-10 mt-6 w-full overflow-hidden md:mt-8">

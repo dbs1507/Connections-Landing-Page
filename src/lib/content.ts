@@ -30,6 +30,7 @@ export const navLinks = [
   { href: "#modalidades", label: "Modalidades" },
   { href: "#depoimentos", label: "Depoimentos" },
   { href: "/enterprise", label: "Empresarial" },
+  { href: "/connectlang", label: "ConnectLang" },
   // { href: "/newsletter", label: "Newsletter", highlight: true },
 ] as const;
 
@@ -273,9 +274,140 @@ export const metodologia = [
 export const metodologiaPlataforma = {
   title: "ConnectLang",
   description:
-    "Uma plataforma exclusiva desenvolvida pela Connections para apoiar a evolução dos nossos alunos, com ferramentas de estudo, biblioteca e acompanhamento dos professores.",
+    "Da sala de aula para o mundo: a plataforma de ensino de idiomas da Connections que guia nossos alunos no dia a dia, também é o ponto de partida para quem quer aprender idiomas de qualquer lugar. Biblioteca, exercícios e ferramentas criadas por professores reais, para alunos da escola e para quem quer estudar com autonomia.",
   image: "/img/plataform-section.png",
   imageAlt: "Plataforma exclusiva Connections para alunos",
+} as const;
+
+export const connectlang = {
+  appUrl: "/connectlang/em-breve",
+  loginUrl: "/connectlang/em-breve",
+  whatsappMessage:
+    "Olá, gostaria de mais informações sobre a ConnectLang :)",
+  comingSoon: {
+    titleLead: "Em breve",
+    titleHighlight: "ConnectLang",
+    titleTail: "disponível",
+    description:
+      "Estamos finalizando os últimos detalhes. Em breve você poderá assinar e começar a praticar idiomas todo dia.",
+    backConnectLang: "Conhecer a plataforma",
+    backHome: "Voltar ao início",
+  },
+  trialMicrocopy: "5 dias grátis · cancele quando quiser",
+  hero: {
+    headlineLead: "Aprenda idiomas",
+    headlineHighlight: "todo dia",
+    headlineMiddle: "de",
+    headlinePrimary: "qualquer lugar",
+    subtitle:
+      "A plataforma de estudo de idiomas da Connections: pratique com textos, áudios e vocabulário — sozinho ou com o acompanhamento de professores reais.",
+    cta: "Começar grátis",
+    image: "/img/plataform-section.png",
+    imageAlt: "Plataforma ConnectLang",
+  },
+  what:
+    "Uma plataforma de estudo de idiomas da Connections: pratique todo dia com textos, áudios e vocabulário — sozinho ou com acompanhamento de professores.",
+  features: [
+    {
+      icon: "library",
+      title: "Biblioteca de textos",
+      description: "Leia com tradução e salve vocabulário.",
+    },
+    {
+      icon: "listening",
+      title: "Listening & Ditado",
+      description: "Treine o ouvido com áudio em velocidade normal ou lenta.",
+    },
+    {
+      icon: "vocab",
+      title: "Vocabulário inteligente",
+      description: "Revisão espaçada pra fixar o que você aprende.",
+    },
+    {
+      icon: "support",
+      title: "Registro de estudos",
+      description: "Registre suas anotações e descobertas quando quiser.",
+    },
+  ],
+  steps: [
+    {
+      code: "01",
+      title: "Assine",
+      description: "Comece com 5 dias grátis.",
+      theme: { bg: "var(--primary)" },
+    },
+    {
+      code: "02",
+      title: "Pratique",
+      description: "Textos, áudios, ditados e vocabulário no seu ritmo.",
+      theme: { bg: "var(--terracotta)" },
+    },
+    {
+      code: "03",
+      title: "Evolua",
+      description:
+        "Estude com revisões espaçadas e aumente sua fluência.",
+      theme: { bg: "#5270ff" },
+    },
+  ],
+  pricing: {
+    title: "Nossos planos",
+    subtitle: "Comece com 5 dias grátis. Cancele quando quiser.",
+    plans: [
+      {
+        name: "Mensal",
+        price: "R$ 5,99",
+        period: "/mês",
+        badge: null,
+        highlight: false,
+        features: [
+          "Acesso completo à plataforma",
+          "Todos os idiomas disponíveis",
+          "5 dias grátis",
+        ],
+        cta: "Começar grátis",
+      },
+      {
+        name: "Anual",
+        price: "R$ 59,90",
+        period: "/ano",
+        badge: "Economize ~17%",
+        highlight: true,
+        features: [
+          "Tudo do plano mensal",
+          "Equivalente a 2 meses de desconto",
+          "5 dias grátis",
+        ],
+        cta: "Começar grátis",
+      },
+    ],
+  },
+  faq: [
+    {
+      q: "Preciso ser aluno da escola?",
+      a: "Não. A ConnectLang é aberta para qualquer pessoa que queira estudar idiomas com autonomia.",
+    },
+    {
+      q: "Posso cancelar quando quiser?",
+      a: "Sim. Você cancela a qualquer momento, sem multa nem burocracia.",
+    },
+    {
+      q: "Como funciona o teste grátis?",
+      a: "Você tem 5 dias para usar a plataforma completa. Se não quiser continuar, é só cancelar antes do fim do período.",
+    },
+    {
+      q: "Sou cobrado depois dos 5 dias?",
+      a: "Só se você não cancelar durante o período de teste. Após os 5 dias, a assinatura escolhida é ativada automaticamente.",
+    },
+    {
+      q: "Quais idiomas estão disponíveis?",
+      a: "Inglês, Português, Espanhol, Francês, Italiano e Alemão.",
+    },
+  ],
+  finalCta: {
+    title: "Comece a praticar hoje, de graça",
+    cta: "Começar grátis",
+  },
 } as const;
 
 export const professores = [
